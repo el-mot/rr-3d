@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<!--
+Copyright 2009 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<head>
+  <title>Google Earth API Samples - Parse KML (Interactive)</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <!-- You should probably remove most of this extra cruft if you're copying
+       this sample! -->
+  <style type="text/css">@import "static/examples.css";</style>
+  <style type="text/css">@import "static/prettify/prettify.css";</style>
+  <script type="text/javascript" src="static/prettify/prettify.js"></script>
+  
+  <!-- Change the key below to your own Maps API key -->
+  <script type="text/javascript" src="https://www.google.com/jsapi?hl=en&amp;key=ABQIAAAAwbkbZLyhsmTCWXbTcjbgbRSzHs7K5SvaUdm8ua-Xxy_-2dYwMxQMhnagaawTo7L1FE1-amhuQxIlXw"></script>
+  <script type="text/javascript">
+
+
+
+  var ge;
+  google.load("earth", "1");
+
+  function init() {
+    google.earth.createInstance('map3d', initCB, failureCB);
+  }
+  
+  function initCB(instance) {
+    ge = instance;
+    ge.getWindow().setVisibility(true);
+    
+    // add a navigation control
+    ge.getNavigationControl().setVisibility(ge.VISIBILITY_AUTO);
+    
+    // add some layers
+//    ge.getLayerRoot().enableLayerById(ge.LAYER_BORDERS, true);
+    ge.getLayerRoot().enableLayerById(ge.LAYER_ROADS, true);
+    ge.getLayerRoot().enableLayerById(ge.LAYER_BUILDINGS, true);
+   //    ge.getLayerRoot().enableLayerById(ge.LAYER_BUILDINGS_LOW_RESOLUTION, true);
+    ge.getLayerRoot().enableLayerById(ge.LAYER_TERRAIN, true);
+    ge.getLayerRoot().enableLayerById(ge.LAYER_TREES, true);
+    var la = ge.createLookAt('');
+    la.set(60.3, 29.3,
+      500, // altitude
+      ge.ALTITUDE_RELATIVE_TO_GROUND,
+      45, // heading
+      80, // straight-down tilt
+      2500 // range (inverse of zoom)
+      );
+    ge.getView().setAbstractView(la);
+
+    // parse the text in the box and add it to Earth
+google.earth.fetchKml(ge,"https://dl.dropbox.com/s/plclcsa1voqfexd/all_kp.xml",function(kmlObject) {
+      if (kmlObject)
+         ge.getFeatures().appendChild(kmlObject);
+});
+    document.getElementById('installed-plugin-version').innerHTML =
+      ge.getPluginVersion().toString();
+  }
+  
+  function failureCB(errorCode) {
+  }
+  
+  
+  /* ]]> */
+  </script>
+</head>
+<body onload="if(window.prettyPrint)prettyPrint();init();">
+  <h1>Google Earth API Sample - 3D balloon</h1>
+  <dl>
+    <dt>Installed Plugin Version:</dt><dd id="installed-plugin-version">...</dd>
+  </dl>
+  <div style="clear: both;"></div>
+  
+  <div id="ui" style="position: relative;">
+    <div id="map3d" style="border: 1px solid silver; width: 1000px; height: 700px;"></div>
+
+  </div>
+</body>
+</html>
