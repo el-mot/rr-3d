@@ -62,7 +62,7 @@ limitations under the License.
     ge.getView().setAbstractView(la);
 
     // parse the text in the box and add it to Earth
-google.earth.fetchKml(ge,"https://dl.dropbox.com/s/plclcsa1voqfexd/all_kp.xml",function(kmlObject) {
+google.earth.fetchKml(ge,"all_kp.xml",function(kmlObject) {
       if (kmlObject)
          ge.getFeatures().appendChild(kmlObject);
     document.getElementById('installed-plugin-version').innerHTML =
