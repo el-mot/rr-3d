@@ -1,0 +1,99 @@
+<?xml version='1.0'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:gx="http://www.google.com/kml/ext/2.2"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd
+                         http://www.google.com/kml/ext/2.2 https://developers.google.com/kml/schema/kml22gx.xsd"
+        >
+    <Document>
+        <name>RR 25-Oct-2014 Animation</name>
+        <visibility>1</visibility>
+        <open>1</open>
+        <Style id="team">
+            <IconStyle>
+                <scale>1</scale>
+                <Icon>
+                    <href>files/team.png</href>
+                </Icon>
+            </IconStyle>
+            <LabelStyle>
+                <scale>0.7</scale>
+            </LabelStyle>
+            <LineStyle>
+                <color>AF67CC99</color>
+                <width>2</width>
+            </LineStyle>
+        </Style>
+        <Style id="sonde">
+            <IconStyle>
+                <scale>1</scale>
+                <Icon>
+                    <href>files/balloon.png</href>
+                </Icon>
+            </IconStyle>
+            <LineStyle>
+                <color>AFCC9967</color>
+                <width>2</width>
+            </LineStyle>
+        </Style>
+        <Style id="sondeBonus">
+            <IconStyle>
+                <scale>1</scale>
+                <Icon>
+                    <href>files/balloonBonus.png</href>
+                </Icon>
+            </IconStyle>
+            <LineStyle>
+                <color>AFCCCC67</color>
+                <width>2</width>
+            </LineStyle>
+        </Style>
+        <Style id="rescue">
+            <IconStyle>
+                <scale>1</scale>
+                <Icon>
+                    <href>files/balloon.png</href>
+                </Icon>
+            </IconStyle>
+            <LineStyle>
+                <color>AF22CC67</color>
+                <width>2</width>
+            </LineStyle>
+        </Style>
+        <NetworkLink id="mainAnimation">
+            <name>Animation</name>
+            <Link>
+                <href>kml/tour.kml</href>
+            </Link>
+        </NetworkLink>
+        <NetworkLink>
+            <name>Пути зондов</name>
+            <visibility>1</visibility>
+            <Link>
+                <href>kml/staticSondes.kml</href>
+            </Link>
+        </NetworkLink>
+        <NetworkLink>
+
+            <name>Анимация зондов</name>
+            <Link>
+                <href>kml/dynSondes.kml</href>
+            </Link>
+        </NetworkLink>
+        <NetworkLink>
+            <name>Пути Команд</name>
+            <visibility>0</visibility>
+            <Link>
+                <href>kml/staticTeams.kml</href>
+            </Link>
+        </NetworkLink>
+        <NetworkLink>
+            <name>Анимация Команд</name>
+            <visibility>1</visibility>
+            <Link>
+                <href>kml/dynTeams.kml</href>
+            </Link>
+        </NetworkLink>
+    </Document>
+
+</kml>
