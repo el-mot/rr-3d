@@ -22,11 +22,11 @@ limitations under the License.
          this sample! -->
     <style type="text/css">@import "static/examples.css";</style>
     <style type="text/css">@import "http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css";</style>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
+    <script src="https://earth-api-samples.googlecode.com/svn/trunk/lib/kmldomwalk.js" type="text/javascript"></script>
     <!-- Change the key below to your own Maps API key -->
     <script type="text/javascript"
-            src="https://www.google.com/jsapi?hl=en&amp;key=ABQIAAAAwbkbZLyhsmTCWXbTcjbgbRSzHs7K5SvaUdm8ua-Xxy_-2dYwMxQMhnagaawTo7L1FE1-amhuQxIlXw"></script>
+            src="https://www.google.com/jsapi?hl=en&key=ABQIAAAAwbkbZLyhsmTCWXbTcjbgbRSzHs7K5SvaUdm8ua-Xxy_-2dYwMxQMhnagaawTo7L1FE1-amhuQxIlXw"></script>
     <script type="text/javascript">
 
 
@@ -64,20 +64,23 @@ limitations under the License.
             // parse the text in the box and add it to Earth
             google.earth.fetchKml(ge, "http://el-mot.github.io/rr-3d/rr2014.kmz", function (kmlObject) {
                 if (kmlObject)
+                {
                     ge.getFeatures().appendChild(kmlObject);
+                    walkKmlDom(kmlObject, function() {
+                        alert(this.getType())
+                        if (this.getType() == 'KmlTour') {
+                            tour = this;
+                            alert(tour)
+                            return false;
+                        }
+                        return true;
+                    });
+                    ge.getTourPlayer().setTour(tour);
+                    ge.getTourPlayer().play();
+                }
+
                 document.getElementById('installed-plugin-version').innerHTML =
                         ge.getPluginVersion().toString();
-                window.alert(walkKmlDom);
-                window.alert(KmlHelpers);
-                walkKmlDom(kmlObject, function() {
-                    alert(this);
-                    if (this.getType() == 'KmlTour') {
-                        tour = this;
-                        ge.getTourPlayer().setTour(tour);
-                        ge.getTourPlayer().play();
-                        return false;
-                    }
-                });
             });
         }
 
