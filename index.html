@@ -61,14 +61,14 @@ limitations under the License.
             ge.getView().setAbstractView(la);
 
             // parse the text in the box and add it to Earth
-            google.earth.fetchKml(ge, "http://el-mot.github.io/rr-3d/rr2014.kmz", function (kmlObject) {
+            google.earth.fetchKml(ge, "http://el-mot.github.io/rr-3d/rr2014.kmz?", function (kmlObject) {
                 if (kmlObject) {
                     ge.getFeatures().appendChild(kmlObject);
                     document.getElementById('installed-plugin-version').innerHTML =
                             ge.getPluginVersion().toString();
                 }
             });
-            google.earth.fetchKml(ge, "http://el-mot.github.io/rr-3d/kml/tour.kml", function (kmlObject) {
+            google.earth.fetchKml(ge, "http://el-mot.github.io/rr-3d/kml/tour.kml?", function (kmlObject) {
                 if (kmlObject) {
                     ge.getFeatures().appendChild(kmlObject);
                     document.getElementById('installed-plugin-version').innerHTML =
