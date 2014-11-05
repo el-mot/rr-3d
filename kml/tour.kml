@@ -48,29 +48,29 @@
                     <gx:TimeStamp>
                         <when>2014-10-25T06:41:10.561677843Z</when>
                     </gx:TimeStamp>
-                    <longitude>29.39296127292816</longitude>
-                    <latitude>60.34890142450209</latitude>
+                    <longitude>29.56211440467192</longitude>
+                    <latitude>60.40671343691887</latitude>
                     <altitude>0</altitude>
-                    <heading>13.01201127116354</heading>
-                    <tilt>62.70407627342082</tilt>
-                    <range>8298.362130798498</range>
+                    <heading>41.19830088264713</heading>
+                    <tilt>81.04955031329499</tilt>
+                    <range>24303.32084527702</range>
                     <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
                 </LookAt>
             </gx:FlyTo>
 
             <gx:FlyTo id="start_l"><!--start-->
-                <gx:duration>60</gx:duration>
+                <gx:duration>80</gx:duration>
                 <gx:flyToMode>bounce</gx:flyToMode>
                 <LookAt>
                     <gx:TimeStamp>
-                        <when>2014-10-25T07:25:00.000Z</when>
+                        <when>2014-10-25T08:31:41.781458437Z</when>
                     </gx:TimeStamp>
-                    <longitude>29.39296127292816</longitude>
-                    <latitude>60.34890142450209</latitude>
+                    <longitude>29.56211440467192</longitude>
+                    <latitude>60.40671343691887</latitude>
                     <altitude>0</altitude>
-                    <heading>13.01201127116354</heading>
-                    <tilt>62.70407627342082</tilt>
-                    <range>8298.362130798498</range>
+                    <heading>41.19830088264713</heading>
+                    <tilt>81.04955031329499</tilt>
+                    <range>24303.32084527702</range>
                     <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
                 </LookAt>
             </gx:FlyTo>
@@ -80,7 +80,7 @@
                 <gx:flyToMode>bounce</gx:flyToMode>
                 <LookAt>
                     <gx:TimeStamp>
-                        <when>2014-10-25T07:26:45.273847907Z</when>
+                        <when>2014-10-25T08:32:00.000000000Z</when>
                     </gx:TimeStamp>
                     <longitude>30.04851763967112</longitude>
                     <latitude>60.482017227105</latitude>

@@ -3,8 +3,7 @@
      xmlns:gx="http://www.google.com/kml/ext/2.2"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd
-                         http://www.google.com/kml/ext/2.2 https://developers.google.com/kml/schema/kml22gx.xsd"
-        >
+                         http://www.google.com/kml/ext/2.2 https://developers.google.com/kml/schema/kml22gx.xsd">
     <Document>
         <name>RR 25-Oct-2014 Animation</name>
         <visibility>1</visibility>
@@ -13,7 +12,7 @@
             <IconStyle>
                 <scale>1</scale>
                 <Icon>
-                    <href>files/team.png</href>
+                    <href>files/team_32x32.png</href>
                 </Icon>
             </IconStyle>
             <LabelStyle>
@@ -28,7 +27,7 @@
             <IconStyle>
                 <scale>1</scale>
                 <Icon>
-                    <href>files/balloon.png</href>
+                    <href>files/kp_32x32.png</href>
                 </Icon>
             </IconStyle>
             <LineStyle>
@@ -40,7 +39,7 @@
             <IconStyle>
                 <scale>1</scale>
                 <Icon>
-                    <href>files/balloonBonus.png</href>
+                    <href>files/kp_bonus_32x32.png</href>
                 </Icon>
             </IconStyle>
             <LineStyle>
@@ -63,7 +62,7 @@
         <NetworkLink id="mainAnimation">
             <name>Animation</name>
             <Link>
-                <href>kml/tour.kml</href>
+                <href>kml/tour1.kml</href>
             </Link>
         </NetworkLink>
         <NetworkLink>
@@ -94,6 +93,46 @@
                 <href>kml/dynTeams.kml</href>
             </Link>
         </NetworkLink>
+        <Folder>
+            <name>Events</name>
+            <Placemark id="start">
+                <name>Start 10:15</name>
+                <TimeSpan>
+                    <begin>2014-10-25T06:30:00Z</begin>
+                    <end>2014-10-25T07:30:00Z</end>
+                </TimeSpan>
+                <Style>
+                    <LabelStyle>
+                        <scale>2</scale>
+                    </LabelStyle>
+                    <BalloonStyle>
+                        <displayMode>hide</displayMode>
+                    </BalloonStyle>
+                </Style>
+                <Point>
+                    <coordinates>29.329045,60.335526</coordinates>
+                </Point>
+            </Placemark>
+
+            <Placemark id="startBonus">
+                <name>Bonus Start 14:30</name>
+                <TimeSpan>
+                    <begin>2014-10-25T11:00:00Z</begin>
+                    <end>2014-10-25T11:45:00Z</end>
+                </TimeSpan>
+                <Style>
+                    <LabelStyle>
+                        <scale>2</scale>
+                    </LabelStyle>
+                    <BalloonStyle>
+                        <displayMode>hide</displayMode>
+                    </BalloonStyle>
+                </Style>
+                <Point>
+                    <coordinates>29.329045,60.335526</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
     </Document>
 
 </kml>
