@@ -98,8 +98,8 @@
             <Placemark id="start">
                 <name>Start 10:15</name>
                 <TimeSpan>
-                    <begin>2014-10-25T06:30:00Z</begin>
-                    <end>2014-10-25T07:30:00Z</end>
+                    <begin>2014-10-25T05:30:00Z</begin>
+                    <end>2014-10-25T06:30:00Z</end>
                 </TimeSpan>
                 <Style>
                     <LabelStyle>
@@ -117,8 +117,8 @@
             <Placemark id="startBonus">
                 <name>Bonus Start 14:30</name>
                 <TimeSpan>
-                    <begin>2014-10-25T11:00:00Z</begin>
-                    <end>2014-10-25T11:45:00Z</end>
+                    <begin>2014-10-25T10:00:00Z</begin>
+                    <end>2014-10-25T10:45:00Z</end>
                 </TimeSpan>
                 <Style>
                     <LabelStyle>
