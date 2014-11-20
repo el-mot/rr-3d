@@ -14,6 +14,7 @@
                 <Icon>
                     <href>files/team_32x32.png</href>
                 </Icon>
+                <hotSpot x="0.5"  y="0.5" xunits="fraction" yunits="fraction"/>
             </IconStyle>
             <LabelStyle>
                 <scale>0.7</scale>
@@ -29,6 +30,7 @@
                 <Icon>
                     <href>files/kp_32x32.png</href>
                 </Icon>
+                <hotSpot x="0.5"  y="0.5" xunits="fraction" yunits="fraction"/>
             </IconStyle>
             <LineStyle>
                 <color>AFCC9967</color>
@@ -41,6 +43,7 @@
                 <Icon>
                     <href>files/kp_bonus_32x32.png</href>
                 </Icon>
+                <hotSpot x="0.5"  y="0.5" xunits="fraction" yunits="fraction"/>
             </IconStyle>
             <LineStyle>
                 <color>AFCCCC67</color>
@@ -53,6 +56,7 @@
                 <Icon>
                     <href>files/balloon.png</href>
                 </Icon>
+                <hotSpot x="0.5"  y="0.5" xunits="fraction" yunits="fraction"/>
             </IconStyle>
             <LineStyle>
                 <color>AF22CC67</color>

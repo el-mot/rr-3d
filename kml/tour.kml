@@ -2,10 +2,8 @@
      xmlns:gx="http://www.google.com/kml/ext/2.2"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd
-                         http://www.google.com/kml/ext/2.2 https://developers.google.com/kml/schema/kml22gx.xsd"
-        >
-    <gx:Tour
-            >
+                         http://www.google.com/kml/ext/2.2 https://developers.google.com/kml/schema/kml22gx.xsd">
+    <gx:Tour>
         <name>October 2014 - RandomRace</name>
         <gx:Playlist id="smartTour">
             <gx:FlyTo id="initial"><!--Initial animation-->
